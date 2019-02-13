@@ -1,0 +1,41 @@
+{
+  "name": "gildedrosejs",
+  "version": "1.0.0",
+  "description": "Gilded Rose kata in JS with Jasmine",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scass91/GildedroseJS.git"
+  },
+  "keywords": [
+    "kata"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scass91/GildedroseJS/issues"
+  },
+  "homepage": "https://github.com/scass91/GildedroseJS#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "^6.26.0",
+    "jasmine": "^3.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": []
+  }
+}
