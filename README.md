@@ -46,11 +46,6 @@ Backstage Passes
 * I wrote failing feature tests for the Conjured items
 * I added Conjured items to the gilded_rose.js change method, all tests pass and requirements are completed
 
---------
-
-# Testing
-
-1.
 
 --------
 
