@@ -1,4 +1,4 @@
-var {Shop, Item} = require('../src/gilded_rose.js');
+//var {Shop, Item} = require('../src/gilded_rose.js');
 describe("Gilded Rose", function() {
 
   it("should foo", function() {
@@ -6,5 +6,4 @@ describe("Gilded Rose", function() {
     const items = gildedRose.updateQuality();
     expect(items[0].name).toEqual("foo");
   });
-
 });

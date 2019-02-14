@@ -2,7 +2,18 @@
 
 # Gilded rose tech test
 
-This is a well known kata developed by [Terry Hughes](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/). This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code. 
+# Approach
+
+Faced with a mess of nested if statements I first tried to understand the code better by playing around with the legacy code in console, I then diagrammed out what the code currently does, and how I would want to refactor it better.
+![Imgur](https://i.imgur.com/C62xtVK.png)
+![Imgur](https://i.imgur.com/dfAID7s.png)
+
+I was curious to see how an independent website would measure the maintainability of the Gilded Rose before any refactoring, I wasn't particularly surprised to see the below from [Code Climate](https://codeclimate.com)
+![Imgur](https://i.imgur.com/IRr4Xfd.png)
+
+--------
+
+This is a well known kata developed by [Terry Hughes](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/). This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
 
 Here is the text of the kata:
 
