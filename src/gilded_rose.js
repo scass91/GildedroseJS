@@ -12,12 +12,14 @@ class Shop {
   }
   change() {
     for (var i = 0; i < this.items.length; i++) {
-      if (this.items[i].name == 'Sulfuras, Hand of Ragnaros') {
+      if (this.items[i].name == "Sulfuras, Hand of Ragnaros") {
         var item = new Sulfuras(this.items[i].sellIn, this.items[i].quality)
-      } else if (this.items[i].name == 'Aged Brie') {
+      } else if (this.items[i].name == "Aged Brie") {
         var item = new AgedBrie(this.items[i].sellIn, this.items[i].quality)
-      } else if (this.items[i].name == 'Backstage passes to a TAFKAL80ETC concert') {
+      } else if (this.items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
         var item = new Backstage(this.items[i].sellIn, this.items[i].quality)
+      } else if (this.items[i].name == "Conjured") {
+        var item = new Conjured(this.items[i].sellIn, this.items[i].quality)
       } else {
         var item = new NonSpecial(this.items[i].sellIn, this.items[i].quality)
       }

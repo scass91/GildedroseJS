@@ -164,6 +164,7 @@ describe("Gilded Rose", function() {
   })
 
   describe("Conjured items", function() {
+
     describe("quality", function() {
       it("reduces in quality by 2 when updated before sell by date", function() {
         const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
@@ -171,7 +172,7 @@ describe("Gilded Rose", function() {
         expect(items[0].quality).toEqual(8);
       })
       it("reduces in quality by 4 when updated after sell by date", function() {
-        const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
+        const gildedRose = new Shop([ new Item("Conjured", 0, 10) ]);
         const items = gildedRose.change();
         expect(items[0].quality).toEqual(6);
       })
