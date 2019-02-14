@@ -69,7 +69,7 @@ describe("Gilded Rose", function() {
         expect(items[0].sellIn).toEqual(9);
       })
       it("can be negative to represent an item being past its sell by date", function() {
-        const gildedRose = new Shop([ new Item("blah", 0, 10) ]);
+        const gildedRose = new Shop([ new Item("Aged Brie", 0, 10) ]);
         const items = gildedRose.updateQuality();
         expect(items[0].sellIn).toEqual(-1);
       })
@@ -107,6 +107,58 @@ describe("Gilded Rose", function() {
         const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 80) ]);
         const items = gildedRose.updateQuality();
         expect(items[0].name).toEqual("Sulfuras, Hand of Ragnaros");
+      })
+    })
+  })
+
+  describe("Backstage Passes", function() {
+
+    describe("quality", function() {
+      it("increases by 1 when there are more than 10 days to sell by", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(11);
+      })
+      it("increases by 2 when there are between 10 and 5 days to sell", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 9, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(12);
+      })
+      it("increases by 3 when there are between 5 and 0 days to sell", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 4, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(13);
+      })
+      it("loses all quality if sold after the concert", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(0);
+      })
+      it("has a maximum quality of 50", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 10, 50) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(50);
+      })
+    })
+
+    describe("sellIn", function() {
+      it("reduces by 1 when the shop is updated", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 10, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].sellIn).toEqual(9);
+      })
+      it("can be negative to represent an item being past its sell by date", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].sellIn).toEqual(-1);
+      })
+    })
+
+    describe("Name", function() {
+      it("Never changes", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 10, 80) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].name).toEqual("Backstage passes to a TAFKAL80ETC concert");
       })
     })
   })
