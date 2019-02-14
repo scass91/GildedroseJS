@@ -4,7 +4,7 @@ describe("NonSpecial", function() {
     it("sellIn should reduce", function() {
       const blah = new NonSpecial(5,10);
       blah.updateSellIn();
-      expect(bah.sellIn).toEqual(4);
+      expect(blah.sellIn).toEqual(4);
     });
   })
 
