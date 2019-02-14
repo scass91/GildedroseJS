@@ -162,4 +162,45 @@ describe("Gilded Rose", function() {
       })
     })
   })
+
+  describe("Conjured items", function() {
+    describe("quality", function() {
+      it("reduces in quality by 2 when updated before sell by date", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
+        const items = gildedRose.change();
+        expect(items[0].quality).toEqual(8);
+      })
+      it("reduces in quality by 4 when updated after sell by date", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
+        const items = gildedRose.change();
+        expect(items[0].quality).toEqual(6);
+      })
+      it("quality is never negative", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 10, 0) ]);
+        const items = gildedRose.change();
+        expect(items[0].quality).toEqual(0);
+      })
+    })
+
+    describe("sellIn", function() {
+      it("reduces by 1 when the shop is updated", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
+        const items = gildedRose.change();
+        expect(items[0].sellIn).toEqual(9);
+      })
+      it("can be negative to represent an item being past its sell by date", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 0, 10) ]);
+        const items = gildedRose.change();
+        expect(items[0].sellIn).toEqual(-1);
+      })
+    })
+
+    describe("Name", function() {
+      it("Never changes", function() {
+        const gildedRose = new Shop([ new Item("Conjured", 10, 10) ]);
+        const items = gildedRose.change();
+        expect(items[0].name).toEqual("Conjured");
+      })
+    })
+  })
 })
