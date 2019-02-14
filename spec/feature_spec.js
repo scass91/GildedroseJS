@@ -2,7 +2,7 @@ describe("Gilded Rose", function() {
 
   describe("non-special items", function() {
 
-    describe("Quality", function() {
+    describe("quality", function() {
       it("reduces in quality by 1 when updated before sell by date", function() {
         const gildedRose = new Shop([ new Item("blah", 10, 10) ]);
         const items = gildedRose.updateQuality();
@@ -20,7 +20,7 @@ describe("Gilded Rose", function() {
       })
     })
 
-    describe("Sell by date", function() {
+    describe("sellIn", function() {
       it("reduces by 1 when the shop is updated", function() {
         const gildedRose = new Shop([ new Item("blah", 10, 10) ]);
         const items = gildedRose.updateQuality();
@@ -44,7 +44,7 @@ describe("Gilded Rose", function() {
 
   describe("Aged Brie", function() {
 
-    describe("Quality", function() {
+    describe("quality", function() {
       it("Increases by 1 when the shop updates within used by date", function() {
         const gildedRose = new Shop([ new Item("Aged Brie", 10, 10) ]);
         const items = gildedRose.updateQuality();
@@ -62,7 +62,7 @@ describe("Gilded Rose", function() {
       })
     })
 
-    describe("Sell by date", function() {
+    describe("sellIn", function() {
       it("reduces by 1 when the shop is updated", function() {
         const gildedRose = new Shop([ new Item("Aged Brie", 10, 10) ]);
         const items = gildedRose.updateQuality();
@@ -80,6 +80,33 @@ describe("Gilded Rose", function() {
         const gildedRose = new Shop([ new Item("Aged Brie", 10, 10) ]);
         const items = gildedRose.updateQuality();
         expect(items[0].name).toEqual("Aged Brie");
+      })
+    })
+  })
+
+  describe("Sulfuras", function() {
+
+    describe("quality", function() {
+      it("Never changes", function() {
+        const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 80) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].quality).toEqual(80);
+      })
+    })
+
+    describe("sellIn", function() {
+      it("Never changes", function() {
+        const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 80) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].sellIn).toEqual(10);
+      })
+    })
+
+    describe("Name", function() {
+      it("Never changes", function() {
+        const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 80) ]);
+        const items = gildedRose.updateQuality();
+        expect(items[0].name).toEqual("Sulfuras, Hand of Ragnaros");
       })
     })
   })
