@@ -12,7 +12,7 @@
 
 1. Run tests with Jasmine `open -a "Google Chrome" SpecRunner.html`
 
-### Useage
+### Usage
 1. In the same SpecRunner browser window, open up the console e.g. in Chrome:  
   `ctrl + shift + J` (windows) or
  `cmd + option + J` (mac)
