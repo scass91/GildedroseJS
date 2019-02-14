@@ -13,7 +13,7 @@
 		} else if (this.sellIn >= 1)  {
 			this.quality = Quality.changeQual(this.quality,-2)
 		} else {
-			this.quality = Quality.changeQual(this.quality, -4)
+			this.quality = Quality.changeQual(this.quality,-4)
 		}
 	}
 
