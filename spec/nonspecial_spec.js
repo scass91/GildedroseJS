@@ -1,4 +1,4 @@
-describe("NonSpecial", function() {
+describe("Non Special Items", function() {
 
   describe("sellIn", function() {
     it("sellIn should reduce", function() {
