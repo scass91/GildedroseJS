@@ -8,15 +8,15 @@
 	}
 
 	function qualityMaximum(quality){
-		if (quality > 50) {
-			quality = 50
+		if (quality > MAX_QUALITY) {
+			quality = MAX_QUALITY
 		}
 		return quality
 	}
 
 	function qualityMinimum(quality){
-		if (quality < 0) {
-			quality = 0
+		if (quality < MIN_QUALITY) {
+			quality = MIN_QUALITY
 		}
 		return quality
 	}
