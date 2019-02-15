@@ -3,12 +3,17 @@
 		this.sellIn = sellIn
 		this.quality = quality
 	}
+
+	const MIN_SALE_DATE = 0
+	const MAX_QUALITY = 50
+	const MIN_QUALITY = 0
+
 	NonSpecial.prototype.updateSellIn = function () {
 		this.sellIn -= 1
 	}
 
 	NonSpecial.prototype.updateQuality = function () {
-		if (this.sellIn > 0)  {
+		if (this.sellIn > MIN_SALE_DATE)  {
 			this.quality = Quality.changeQual(this.quality,-1)
 		} else {
 			this.quality = Quality.changeQual(this.quality,-2)

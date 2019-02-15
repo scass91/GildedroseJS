@@ -10,6 +10,7 @@ class Shop {
 	constructor(items=[]){
 		this.items = items
 	}
+
 	change() {
 		for (var i = 0; i < this.items.length; i++) {
 			if (this.items[i].name == "Sulfuras, Hand of Ragnaros") {
