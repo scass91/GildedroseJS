@@ -7,10 +7,6 @@
 		this.sellIn -= 1
 	}
 
-	const MIN_SALE_DATE = 0
-	const MAX_QUALITY = 50
-	const MIN_QUALITY = 0
-
 	Backstage.prototype.updateQuality = function () {
 		if (this.sellIn <= MIN_SALE_DATE ){
 			this.quality = MIN_QUALITY

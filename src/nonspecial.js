@@ -4,10 +4,6 @@
 		this.quality = quality
 	}
 
-	const MIN_SALE_DATE = 0
-	const MAX_QUALITY = 50
-	const MIN_QUALITY = 0
-
 	NonSpecial.prototype.updateSellIn = function () {
 		this.sellIn -= 1
 	}
