@@ -1,6 +1,6 @@
 # Gilded rose tech test
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/77dd545ea1faaa59ad7a/maintainability)](https://codeclimate.com/github/scass91/GildedroseJS/maintainability)
+[![BCH compliance](https://bettercodehub.com/edge/badge/scass91/GildedroseJS?branch=master)](https://bettercodehub.com/)
 
 ## Getting started
 
@@ -23,11 +23,14 @@
 # Approach
 
 Faced with a mess of nested if statements I first tried to understand the code better by playing around with the legacy code in console, I then diagrammed out what the code currently does, and how I would want to refactor it better.
+
 ![Imgur](https://i.imgur.com/C62xtVK.png)
+
 ![Imgur](https://i.imgur.com/dfAID7s.png)
 
-I was curious to see how an independent website would measure the maintainability of the Gilded Rose before any refactoring, I wasn't particularly surprised to see the below from [Code Climate](https://codeclimate.com)
-![Imgur](https://i.imgur.com/IRr4Xfd.png)
+The original repo contains the below, indicating how bad the code quality is to start with:
+![Imgur](https://i.imgur.com/AAaXXTA.png)
+
 
 * Once I got my head around what the code was specifically trying to achieve, I got to work writing feature tests for the already implemented functionality - my logic here was that at some point down the line I would need to check the code could still function as intended and if these tests broke then I would know I'd done something wrong
 * Noting that different items in a shop behaved differently, I began writing feature tests in groups relating to each of these items, with a focus on 3 things; names, sell by dates & quality
@@ -46,9 +49,7 @@ Backstage Passes
 * I wrote failing feature tests for the Conjured items
 * I added Conjured items to the gilded_rose.js change method, all tests pass and requirements are completed
 
-
 --------
-
 
 This is a well known kata developed by [Terry Hughes](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/). This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
 
