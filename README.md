@@ -19,6 +19,7 @@
 2. Create a new item `a = new Item(itemName, sellIn, quality)`
 3. Create a new shop with the item added to it `s = new Shop([a])`
 4. Update the state of the items in the store with `s.change()`
+5. Further items can be created, and then added to the array of items in the shop. For example `b = new Item(itemName, sellIn, quality)`, then `x = new Shop([a,b])`
 
 # Approach
 
