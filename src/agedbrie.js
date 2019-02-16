@@ -1,9 +1,10 @@
 (function(exports){
+
 	function AgedBrie(sellIn, quality){
 		this.sellIn = sellIn
 		this.quality = quality
 	}
-
+	
 	AgedBrie.prototype.updateSellIn = function () {
 		this.sellIn -= 1
 	}

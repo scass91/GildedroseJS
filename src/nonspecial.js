@@ -1,4 +1,5 @@
 (function(exports){
+
 	function NonSpecial(sellIn, quality){
 		this.sellIn = sellIn
 		this.quality = quality

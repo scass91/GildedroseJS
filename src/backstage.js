@@ -1,8 +1,10 @@
 (function(exports){
+
 	function Backstage(sellIn, quality){
 		this.sellIn = sellIn
 		this.quality = quality
 	}
+
 	Backstage.prototype.updateSellIn = function () {
 		this.sellIn -= 1
 	}

@@ -13,6 +13,13 @@ class Shop {
 
 	change() {
 
+		var option = {
+		  "Sulfuras, Hand of Ragnaros" : Sulfuras,
+		  "Aged Brie" : AgedBrie,
+		  "Backstage passes to a TAFKAL80ETC concert" : Backstage,
+		  "Conjured" : Conjured
+		}
+
 		for (var i = 0; i < this.items.length; i++) {
       if (!(this.items[i].name in option)) {
         var item = new NonSpecial(this.items[i].sellIn, this.items[i].quality)
