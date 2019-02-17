@@ -49,6 +49,7 @@ Backstage Passes
 * Finally replaced all the nested if statements in the legacy code with injected classes for the items listed, I didn't yet add the Conjured items in as it hadn't been feature tested
 * I wrote failing feature tests for the Conjured items
 * I added Conjured items to the gilded_rose.js change method, all tests pass and requirements are completed
+* When further refactoring, I tried to keepy my code as DRY as possible. I added an options.js file which contained the magic numbers for the program
 
 --------
 
