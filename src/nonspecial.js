@@ -10,7 +10,7 @@
 	}
 
 	NonSpecial.prototype.updateQuality = function () {
-		if (this.sellIn > MIN_SALE_DATE)  {
+		if (this.sellIn > OPTIONS.get("MIN_SALE_DATE"))  {
 			this.quality = Quality.changeQual(this.quality,-1)
 		} else {
 			this.quality = Quality.changeQual(this.quality,-2)

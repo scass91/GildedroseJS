@@ -8,15 +8,15 @@
 	}
 
 	function qualityMaximum(quality){
-		if (quality > MAX_QUALITY) {
-			quality = MAX_QUALITY
+		if (quality > OPTIONS.get("MAX_QUALITY")) {
+			quality = OPTIONS.get("MAX_QUALITY")
 		}
 		return quality
 	}
 
 	function qualityMinimum(quality){
-		if (quality < MIN_QUALITY) {
-			quality = MIN_QUALITY
+		if (quality < OPTIONS.get("MIN_QUALITY")) {
+			quality = OPTIONS.get("MIN_QUALITY")
 		}
 		return quality
 	}

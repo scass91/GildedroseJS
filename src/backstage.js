@@ -10,8 +10,8 @@
 	}
 
 	Backstage.prototype.updateQuality = function () {
-		if (this.sellIn <= MIN_SALE_DATE ){
-			this.quality = MIN_QUALITY
+		if (this.sellIn <= OPTIONS.get("MIN_SALE_DATE") ){
+			this.quality = OPTIONS.get("MIN_QUALITY")
 		} else if (this.sellIn < 6 ){
 			this.quality = Quality.changeQual(this.quality,3)
 		} else if (this.sellIn < 11){

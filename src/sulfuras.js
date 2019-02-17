@@ -3,7 +3,7 @@
 
 	function Sulfuras(sellIn, quality){
 		this.sellIn = sellIn
-		this.quality = SULFURAS_QUALITY
+		this.quality = OPTIONS.get("SULFURAS_QUALITY")
 	}
 
 	Sulfuras.prototype.updateSellIn = function () {
