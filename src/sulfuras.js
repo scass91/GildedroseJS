@@ -2,8 +2,9 @@
 (function(exports){
 
 	function Sulfuras(sellIn, quality){
+		SULFURAS_QUALITY = 80
 		this.sellIn = sellIn
-		this.quality = OPTIONS.get("SULFURAS_QUALITY")
+		this.quality = SULFURAS_QUALITY
 	}
 
 	Sulfuras.prototype.updateSellIn = function () {
